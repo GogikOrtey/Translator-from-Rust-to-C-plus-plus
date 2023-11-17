@@ -1,0 +1,12 @@
+fn main() {
+    let mut num = 2;
+    let mut result = 1;
+    let power = 6;
+
+    while (power > 0) {
+        result *= num;
+        power -= 1;
+    }
+
+    println!("2 в степени 6 равно {}", result);
+}
