@@ -8,7 +8,7 @@ namespace Lexer_01
 {
     // Программа: Лексер для языка Rust
     // Назначение: Разбивает входящий файл на языке Rust, на лексемы
-    // Версия: 4.0 от 25.11.2023
+    // Версия: 5.0 от 29.01.2024
     // Автор: Gogik Ortey
 
     // Все текстовые файлы (Input.txt, Output.txt и другие)
@@ -253,7 +253,7 @@ namespace Lexer_01
         public static void StartMassege()
         {
             print("Программа: Транслятор с языка Rust на язык C++");
-            print("v4.__ (almost final)");
+            print("v5.0 Final");
             print("Автор: Gogik Ortey");
             print(" ");
         }
