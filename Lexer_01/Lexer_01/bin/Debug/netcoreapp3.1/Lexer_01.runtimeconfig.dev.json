@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\gogor\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\gogor\\.nuget\\packages"
-    ]
-  }
-}

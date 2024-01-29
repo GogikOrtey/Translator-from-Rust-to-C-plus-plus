@@ -1,0 +1,11 @@
+// if else и else if
+
+let a = 10;
+
+if (a < 5) {
+    println!("a меньше 5");
+} else if (a == 5) {
+    println!("a равно 5");
+} else {
+    println!("a больше 5");
+}

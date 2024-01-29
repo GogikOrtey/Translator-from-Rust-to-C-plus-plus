@@ -1,0 +1,144 @@
+Программа: Транслятор с языка Rust на язык C++
+v4.__ (almost final)
+Автор: Gogik Ortey
+ 
+Основные настройки: 
+
+> Оборачиваем ли мы на выходе наш код в функцию main : Yes
+> Транслятор удаляет неиспользуемые переменные? : No
+
+
+Входной файл:
+// if else и else if
+
+let a = 10;
+
+if (a < 5) {
+    println!("a меньше 5");
+} else if (a == 5) {
+    println!("a равно 5");
+} else {
+    println!("a больше 5");
+}
+
+Все распознанные лексемы: 
+
+0    let        -  LET
+1    a          -  ID
+2    =          -  ASSIGNMENT_OPERATION__SET
+3    10         -  NUM_INT
+4    ;          -  END_LINE
+5    if         -  IF
+6    (          -  OPEN_BRACKET
+7    a          -  ID
+8    <          -  COMPARISON_OPERATION__LESS
+9    5          -  NUM_INT
+10   )          -  CLOSED_BRACKET
+11   {          -  START_VOID
+12   println!   -  PRINT
+13   (          -  OPEN_BRACKET
+14   "a меньше 5"  -  STRING
+15   )          -  CLOSED_BRACKET
+16   ;          -  END_LINE
+17   }          -  END_VOID
+18   elif       -  ELIF
+19   (          -  OPEN_BRACKET
+20   a          -  ID
+21   ==         -  COMPARISON_OPERATION__EQUAL
+22   5          -  NUM_INT
+23   )          -  CLOSED_BRACKET
+24   {          -  START_VOID
+25   println!   -  PRINT
+26   (          -  OPEN_BRACKET
+27   "a равно 5"  -  STRING
+28   )          -  CLOSED_BRACKET
+29   ;          -  END_LINE
+30   }          -  END_VOID
+31   else       -  ELSE
+32   {          -  START_VOID
+33   println!   -  PRINT
+34   (          -  OPEN_BRACKET
+35   "a больше 5"  -  STRING
+36   )          -  CLOSED_BRACKET
+37   ;          -  END_LINE
+38   }          -  END_VOID
+ 
+Дерево разбора парсера: 
+ 
+INITIALIZATION_VAR
+  NAME : a
+  TYPE : INT
+  VALUE : 10
+IF
+  CONDITION
+    OPERATION : <
+      ID : a
+      NUM_INT : 5
+  BODY
+    PRINT
+      ARGUMENTS
+        STRING : "a меньше 5"
+END_FUNC
+ELIF
+  CONDITION
+    OPERATION : ==
+      ID : a
+      NUM_INT : 5
+  BODY
+    PRINT
+      ARGUMENTS
+        STRING : "a равно 5"
+END_FUNC
+ELSE
+  CONDITION
+BODY
+  PRINT
+    ARGUMENTS
+      STRING : "a больше 5"
+END_FUNC
+ 
+---------------------------------------------------
+Семантический анализатор:
+ 
+Проблем не обнаружено.
+
+---------------------------------------------------
+
+Кодогенератор С++
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a = 10;
+  if (a < 5)
+  {
+    std::cout << "a меньше 5" << std::endl;
+  }
+  else if (a == 5)
+  {
+    std::cout << "a равно 5" << std::endl;
+  }
+  else
+  {
+    std::cout << "a больше 5" << std::endl;
+  }
+
+  return 0;
+}
+---------------------------------------------------
+
+Время выполнения программы: 0,62 секунд
+
+_______________________________________
+_______________________________________
+_______________________________________
+
+Программа завершилась с кодом: OK
+
+Успешная трансляция программы
+
+
+
+

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "d2Fxupl9mtsfLTrhJo/wdOhbP8GJ76afQaIRhOIM434jZa7+FwWZRX6zgrIitRLa9sQQBIUkdQIA0KrAaliBWw==",
+  "success": true,
+  "projectFilePath": "D:\\Рабочий стол\\Учёба 4й курс 2023\\ТЯПИК\\Lexer_01\\Lexer_01\\Lexer_01.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gogor\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a = 10;
+  if (a < 5)
+  {
+    std::cout << "a меньше 5" << std::endl;
+  }
+  else if (a == 5)
+  {
+    std::cout << "a равно 5" << std::endl;
+  }
+  else
+  {
+    std::cout << "a больше 5" << std::endl;
+  }
+
+  return 0;
+}
